@@ -8,6 +8,7 @@ function App() {
   const [showParagraph, setShowParagraph] = new useState(false);
   console.log("app");
   //UseCallback is used to store function across the components re-evaluations.
+  //And also we don't have to provide showParagraph as a dependency to dependencies array because useCallback ensures that it will be same function object.
   const toggleParagraphHandler = useCallback(() => setShowParagraph(prevState => !prevState), []);
   return (
     <div className="app">
