@@ -5,6 +5,8 @@ import DemoOutput from "./components/Demo/DemoOutput";
 import Button from "./components/UI/Button/Button";
 
 function App() {
+  //Q. when every time component re-evaluates how are we still getting previous state.
+  //A. React is responsible for managing state. That default value that we pass while creating state is only considered once. React memorizes to which state it belongs. When re-evaluation of a component happens react simply recognizes that it already has state of this component and instead updates that state as needed and it never re-initializes the state unless it is totally gone from dom.
   const [showParagraph, setShowParagraph] = new useState(false);
   const [allowToggle, setAllowToggle] = useState(false);
   console.log("app");
